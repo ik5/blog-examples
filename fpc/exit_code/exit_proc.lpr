@@ -57,9 +57,9 @@ begin
     else
       Error(reQuit);            // Quit signal as a runtime error
    end;
- except // Lets handle some exceptions
-   // Exception is the lowest exception class, every other exception must
-   // inherit from it
+ except // Lets capture some exceptions
+        // Exception is the lowest exception class, every other exception must
+        // inherit from it
    on e:Exception do // Lets see what are the exception we had
     begin
      // We are checking to see what is the e class
