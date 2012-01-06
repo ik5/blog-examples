@@ -22,7 +22,7 @@ begin
                writeln('Divided by zero');
          203 : writeln('Out of memory');
          233 : writeln('You wanted to quite ...');
-        else // Something we did not expected
+        else // Something we did unexpected
           writeln(ExitCode);
         end;
 
