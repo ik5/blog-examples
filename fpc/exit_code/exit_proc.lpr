@@ -63,11 +63,13 @@ begin
    on e:Exception do // Lets see what are the exception we had
     begin
      // We are checking to see what is the e class
-     if e is EDivByZero   then raise; // let the exitproc handle it ...
+        // let the exitproc handle divided in zero
+     if e is EDivByZero then raise;
 
      // EOutOfMemory will not be raised, because it is a runtime error we
-     // created, however if it was an exception, then
-     if e is EOutOfMemory then raise; // let the exitproc handle it ...
+     // created, however if it was an exception, then let the exitproc handle
+     // it ...
+     if e is EOutOfMemory then raise;
     end;
  end;
 
