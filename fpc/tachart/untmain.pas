@@ -16,13 +16,17 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     Chart1: TChart;
     ColorDialog1: TColorDialog;
     Panel1: TPanel;
+    SaveDialog1: TSaveDialog;
+    Splitter1: TSplitter;
     StringGrid1: TStringGrid;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure StringGrid1ButtonClick(Sender: TObject; aCol, aRow: Integer);
     procedure StringGrid1ColRowDeleted(Sender: TObject; IsColumn: Boolean;
@@ -41,7 +45,8 @@ var
   Form1: TForm1;
 
 implementation
-uses TATextElements, TAChartUtils, TALegend;
+uses TATextElements, TAChartUtils, TALegend, TADrawerSVG, TADrawUtils,
+     TADrawerCanvas;
 
 {$R *.lfm}
 
@@ -79,6 +84,31 @@ begin
         pie.Add(StrToFloat(Cells[2, i]), Cells[1, i], acol);
       end;
    end;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+var fs : TFileStream;
+    id : IChartDrawer;
+begin
+  if not SaveDialog1.Execute then exit;
+
+  case SaveDialog1.FilterIndex of
+    1 : Chart1.SaveToBitmapFile(SaveDialog1.FileName);
+    2 : Chart1.SaveToFile(TJPEGImage, SaveDialog1.FileName);
+    3 : Chart1.SaveToFile(TPortableNetworkGraphic, SaveDialog1.FileName);
+    4 : Chart1.SaveToFile(TPortableAnyMapGraphic, SaveDialog1.FileName);
+    5 : Chart1.SaveToFile(TPixmap, SaveDialog1.FileName);
+    6 : begin
+          fs := TFileStream.Create(SaveDialog1.FileName, fmCreate);
+          try
+            id                       := TSVGDrawer.Create(fs,true);
+            id.DoChartColorToFPColor := @ChartColorSysToFPColor;
+            Chart1.Draw(id, Rect(0,0, Chart1.Width, Chart1.Height));
+          finally
+            fs.Free;
+          end;
+        end;
+  end;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -128,7 +158,7 @@ begin
   Chart1.ClearSeries; // remove any existed series
   pie          := TPieSeries.Create(Chart1); // Create a pie series
   pie.Title    := 'Pie Chart'; // Give it a name
-  pie.Exploded := True; // allow each part to be apart from the pie
+  pie.Exploded := False; // don't allow each part to be apart from the pie
   with pie.Legend do
    begin
      Multiplicity := lmPoint; // we are working on the point
