@@ -1,0 +1,148 @@
+object Form1: TForm1
+  Left = 664
+  Height = 519
+  Top = 128
+  Width = 728
+  Caption = 'Pie Chart example'
+  ClientHeight = 519
+  ClientWidth = 728
+  OnCreate = FormCreate
+  LCLVersion = '1.1'
+  object Panel1: TPanel
+    Left = 0
+    Height = 145
+    Top = 374
+    Width = 728
+    Align = alBottom
+    ClientHeight = 145
+    ClientWidth = 728
+    TabOrder = 0
+    object StringGrid1: TStringGrid
+      Left = 1
+      Height = 143
+      Top = 2
+      Width = 567
+      Align = alCustom
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      ColCount = 4
+      Columns = <      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'Name'
+          Width = 213
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'Percentage'
+          Width = 150
+        end      
+        item
+          ButtonStyle = cbsEllipsis
+          Title.Alignment = taCenter
+          Title.Caption = 'Color'
+          Width = 130
+        end>
+      HeaderHotZones = [gzNormal]
+      HeaderPushZones = [gzNormal]
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goEditing, goAlwaysShowEditor, goDblClickAutoSize, goSmoothScroll]
+      RowCount = 1
+      TabOrder = 0
+      OnColRowDeleted = StringGrid1ColRowDeleted
+      OnColRowInserted = StringGrid1ColRowDeleted
+      OnButtonClick = StringGrid1ButtonClick
+      OnSetEditText = StringGrid1SetEditText
+      ColWidths = (
+        64
+        213
+        150
+        130
+      )
+    end
+    object Button1: TButton
+      Left = 573
+      Height = 25
+      Top = 7
+      Width = 149
+      Anchors = [akTop, akRight]
+      Caption = 'Add Item'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+    object Button2: TButton
+      Left = 573
+      Height = 25
+      Top = 39
+      Width = 149
+      Anchors = [akTop, akRight]
+      Caption = 'Remove Last Item'
+      OnClick = Button2Click
+      TabOrder = 2
+    end
+    object Button3: TButton
+      Left = 573
+      Height = 25
+      Top = 117
+      Width = 149
+      Anchors = [akTop, akRight]
+      Caption = 'Apply'
+      OnClick = Button3Click
+      TabOrder = 3
+    end
+  end
+  object Chart1: TChart
+    Left = 0
+    Height = 374
+    Top = 0
+    Width = 728
+    AllowZoom = False
+    AntialiasingMode = amOn
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Legend.ColumnCount = 2
+    Legend.Visible = True
+    Proportional = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Align = alClient
+    ParentColor = False
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 400
+    top = 448
+  end
+end
