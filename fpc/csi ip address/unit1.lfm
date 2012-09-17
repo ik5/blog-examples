@@ -1,19 +1,19 @@
 object Form1: TForm1
-  Left = 533
+  Left = 824
   Height = 53
-  Top = 255
-  Width = 320
+  Top = 587
+  Width = 283
   AutoSize = True
   Caption = 'killer IP address'
   ClientHeight = 53
-  ClientWidth = 320
+  ClientWidth = 283
   Position = poDesktopCenter
   LCLVersion = '0.9.31'
   object Label1: TLabel
     Left = 0
     Height = 21
     Top = 0
-    Width = 320
+    Width = 283
     Align = alTop
     Caption = 'Click the button to track the killers IP Address'
     ParentColor = False
@@ -22,7 +22,7 @@ object Form1: TForm1
     Left = 0
     Height = 32
     Top = 21
-    Width = 320
+    Width = 283
     Align = alClient
     Caption = 'TRACK IP ADDRESS'
     OnClick = Button1Click
