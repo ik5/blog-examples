@@ -180,7 +180,7 @@ begin
    begin
      GroupTitles.Clear;
      GroupTitles.Add('Pie');
-     Chart1.AddSeries(pie); // add the series to the pie
+     Chart1.AddSeries(pie); // add the series to the chart
    end;
 end;
 
