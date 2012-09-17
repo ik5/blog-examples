@@ -21,7 +21,7 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="79"/>
-        <CursorPos X="71" Y="106"/>
+        <CursorPos X="6" Y="101"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -94,12 +94,10 @@
       <Unit10>
         <Filename Value="../../../fpc/lazarus/lazarus/lcl/graphics.pp"/>
         <UnitName Value="Graphics"/>
-        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1861"/>
         <CursorPos X="1" Y="1897"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit10>
     </Units>
     <General>
