@@ -90,22 +90,23 @@ procedure TForm1.Button4Click(Sender: TObject);
 var fs : TFileStream;
     id : IChartDrawer;
 begin
+  // Does the user want to save an image of the chart ?
   if not SaveDialog1.Execute then exit;
 
-  case SaveDialog1.FilterIndex of
-    1 : Chart1.SaveToBitmapFile(SaveDialog1.FileName);
-    2 : Chart1.SaveToFile(TJPEGImage, SaveDialog1.FileName);
-    3 : Chart1.SaveToFile(TPortableNetworkGraphic, SaveDialog1.FileName);
-    4 : Chart1.SaveToFile(TPortableAnyMapGraphic, SaveDialog1.FileName);
-    5 : Chart1.SaveToFile(TPixmap, SaveDialog1.FileName);
-    6 : begin
-          fs := TFileStream.Create(SaveDialog1.FileName, fmCreate);
+  case SaveDialog1.FilterIndex of // lets see what type of image they want
+    1 : Chart1.SaveToBitmapFile(SaveDialog1.FileName);                          // bitmap
+    2 : Chart1.SaveToFile(TJPEGImage, SaveDialog1.FileName);                    // JPeg
+    3 : Chart1.SaveToFile(TPortableNetworkGraphic, SaveDialog1.FileName);       // PNG - our default
+    4 : Chart1.SaveToFile(TPortableAnyMapGraphic, SaveDialog1.FileName);        // PPM
+    5 : Chart1.SaveToFile(TPixmap, SaveDialog1.FileName);                       // XPM
+    6 : begin                                                                   // SVG
+          fs := TFileStream.Create(SaveDialog1.FileName, fmCreate);  //create a stream
           try
-            id                       := TSVGDrawer.Create(fs,true);
-            id.DoChartColorToFPColor := @ChartColorSysToFPColor;
-            Chart1.Draw(id, Rect(0,0, Chart1.Width, Chart1.Height));
+            id                       := TSVGDrawer.Create(fs,true);  // create an svg drawer
+            id.DoChartColorToFPColor := @ChartColorSysToFPColor;     // set the default color chart of the system
+            Chart1.Draw(id, Rect(0,0, Chart1.Width, Chart1.Height)); // draw it to the canvas
           finally
-            fs.Free;
+            fs.Free; // free the file
           end;
         end;
   end;
