@@ -28,6 +28,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure StringGrid1ButtonClick(Sender: TObject; aCol, aRow: Integer);
     procedure StringGrid1ColRowDeleted(Sender: TObject; IsColumn: Boolean;
       sIndex, tIndex: Integer);
@@ -119,6 +120,12 @@ begin
   // Disable Delete and Apply buttons. we do not have any content yet
   Button2.Enabled        := StringGrid1.RowCount > 1;
   Button3.Enabled        := StringGrid1.RowCount > 1;
+end;
+
+procedure TForm1.FormDestroy(Sender: TObject);
+begin
+  if Assigned(pie) then
+    FreeAndNil(pie);
 end;
 
 procedure TForm1.StringGrid1ButtonClick(Sender: TObject; aCol, aRow: Integer);
