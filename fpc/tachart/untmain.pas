@@ -55,9 +55,8 @@ uses TATextElements, TAChartUtils, TALegend, TADrawerSVG, TADrawUtils,
 
 procedure TForm1.btnAddItemClick(Sender: TObject);
 begin
-  sgGraphDetails.RowCount := sgGraphDetails.RowCount + 1;
+  sgGraphDetails.RowCount                            := sgGraphDetails.RowCount + 1;
   sgGraphDetails.Cells[0,sgGraphDetails.RowCount -1] := IntToStr(sgGraphDetails.RowCount -1);
-
 end;
 
 procedure TForm1.btnRemoveLastItemClick(Sender: TObject);
@@ -118,8 +117,8 @@ begin
   // Add the '#' string to the first fixed item
   sgGraphDetails.Cells[0,0] := '#';
   // Disable Delete and Apply buttons. we do not have any content yet
-  btnRemoveLastItem.Enabled        := sgGraphDetails.RowCount > 1;
-  btnApply.Enabled        := sgGraphDetails.RowCount > 1;
+  btnRemoveLastItem.Enabled := sgGraphDetails.RowCount > 1;
+  btnApply.Enabled          := sgGraphDetails.RowCount > 1;
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
@@ -143,8 +142,8 @@ procedure TForm1.sgGraphDetailsColRowDeleted(Sender: TObject; IsColumn: Boolean;
   sIndex, tIndex: Integer);
 begin
   // Decide if we need to enable or not the delete and apply buttons ...
-  Button2.Enabled := sgGraphDetails.RowCount > 1;
-  btnApply.Enabled := sgGraphDetails.RowCount > 1;
+  btnRemoveLastItem.Enabled := sgGraphDetails.RowCount > 1;
+  btnApply.Enabled          := sgGraphDetails.RowCount > 1;
 end;
 
 procedure TForm1.sgGraphDetailsSetEditText(Sender: TObject; ACol, ARow: Integer;
