@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="12">
+    <Units Count="13">
       <Unit0>
         <Filename Value="tachart_example.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -107,11 +107,18 @@
         <CursorPos X="3" Y="229"/>
         <UsageCount Value="10"/>
       </Unit11>
+      <Unit12>
+        <Filename Value="../../../fpc/lazarus/components/luipack/cairo/lcl/include/gtk2/cairolcl.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="37" Y="10"/>
+        <UsageCount Value="10"/>
+      </Unit12>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="untmain.pas"/>
         <Caret Line="74" Column="1" TopLine="48"/>
@@ -224,10 +231,6 @@
         <Filename Value="untmain.pas"/>
         <Caret Line="128" Column="21" TopLine="125"/>
       </Position28>
-      <Position29>
-        <Filename Value="untmain.pas"/>
-        <Caret Line="129" Column="12" TopLine="151"/>
-      </Position29>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
