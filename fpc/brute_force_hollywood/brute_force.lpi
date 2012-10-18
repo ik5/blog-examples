@@ -51,7 +51,7 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="project1"/>
+      <Filename Value="brute_force"/>
     </Target>
     <SearchPaths>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
