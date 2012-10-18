@@ -1,0 +1,68 @@
+object frmMain: TfrmMain
+  Left = 753
+  Height = 129
+  Top = 648
+  Width = 301
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'Brute force your code'
+  ClientHeight = 129
+  ClientWidth = 301
+  KeyPreview = True
+  OnKeyPress = FormKeyPress
+  Position = poScreenCenter
+  LCLVersion = '1.1'
+  Visible = True
+  object pass: TJLabeledIntegerEdit
+    Left = 135
+    Height = 26
+    Top = 38
+    Width = 158
+    DisplayFormat = '0'
+    Value = 12345689
+    Alignment = taCenter
+    EditLabel.AnchorSideTop.Control = pass
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = pass
+    EditLabel.AnchorSideBottom.Control = pass
+    EditLabel.AnchorSideBottom.Side = asrBottom
+    EditLabel.Left = 16
+    EditLabel.Height = 18
+    EditLabel.Top = 42
+    EditLabel.Width = 119
+    EditLabel.Caption = 'Enter Password:'
+    EditLabel.ParentColor = False
+    EditLabel.Layout = tlCenter
+    LabelPosition = lpLeft
+    LabelSpacing = 0
+    MaxLength = 9
+    TabOrder = 0
+    OnKeyPress = passKeyPress
+  end
+  object lblCounterPrompt: TLabel
+    Left = 16
+    Height = 18
+    Top = 10
+    Width = 63
+    Caption = 'Counter:'
+    ParentColor = False
+  end
+  object edtCounter: TEdit
+    Left = 135
+    Height = 26
+    Top = 6
+    Width = 158
+    Alignment = taCenter
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object btnStart: TButton
+    Left = 92
+    Height = 25
+    Top = 93
+    Width = 117
+    Caption = 'Start Cracking'
+    OnClick = btnStartClick
+    TabOrder = 2
+  end
+end
