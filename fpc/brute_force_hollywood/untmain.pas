@@ -72,10 +72,10 @@ begin
   Application.ProcessMessages; // Force the Red color and coursor change
 
   // Lets decide how long we want it to take according to number range
-       if Data <= 9999    then Delay := 1000
-  else if Data <= 999999  then Delay := 100
-  else if Data <= 9999999 then Delay := 10
-  else                         Delay := 1;
+       if Data <= 9999    then Delay := 500 // 500 MS
+  else if Data <= 999999  then Delay := 100 // 100 MS
+  else if Data <= 9999999 then Delay := 10  //  10 MS
+  else                         Delay := 1;  //   1 MS
 
   Started := Now;
   while (i < Data) and (not ToAbort) do // Stop only when we found the range or
