@@ -79,7 +79,7 @@ begin
 
   Started := Now;
   while (i < Data) and (not ToAbort) do // Stop only when we found the range or
-   begin                                 // the user pressed on Escape
+   begin                                // the user pressed on Escape
      inc(i); // i++
      frmMain.edtCounter.Text := IntToStr(i);
      Application.ProcessMessages; // Make sure that the message is processed now !
@@ -88,7 +88,7 @@ begin
   Ended := Now;
 
   sum := 'Started at ' + DateTimeToStr(Started) + LineEnding +
-         'Ended at ' + DateTimeToStr(Ended);
+         'Ended at '   + DateTimeToStr(Ended);
   if i = pass.Value then begin // If we found the password ...
    frmMain.edtCounter.Color := clGreen;
    Application.ProcessMessages;
