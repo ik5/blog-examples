@@ -11,10 +11,11 @@ uses
   Forms, untMain
   { you can add units after this };
 
-{$R *.res}
-
 begin
+  Application.Title:='brute force';
+  {$IF defined(RequireDerivedFormResource)}
   RequireDerivedFormResource := True;
+  {$ENDIF}
   Application.Initialize;
   Application.CreateForm(TfrmMain, frmMain);
   Application.Run;
