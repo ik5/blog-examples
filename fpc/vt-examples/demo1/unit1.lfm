@@ -1,0 +1,69 @@
+object frmMain: TfrmMain
+  Left = 836
+  Height = 293
+  Top = 223
+  Width = 425
+  Caption = 'frmMain'
+  ClientHeight = 293
+  ClientWidth = 425
+  OnCreate = FormCreate
+  LCLVersion = '1.1'
+  object VST: TVirtualStringTree
+    Left = 0
+    Height = 253
+    Top = 0
+    Width = 425
+    Align = alClient
+    Color = clAppWorkspace
+    Header.AutoSizeIndex = 0
+    Header.Columns = <>
+    Header.DefaultHeight = 17
+    Header.MainColumn = -1
+    Header.Options = [hoColumnResize, hoDrag]
+    TabOrder = 0
+    OnChange = VSTChange
+    OnFocusChanged = VSTFocusChanged
+    OnFreeNode = VSTFreeNode
+    OnGetText = VSTGetText
+    OnGetNodeDataSize = VSTGetNodeDataSize
+    OnNewText = VSTNewText
+  end
+  object pnlBottom: TPanel
+    Left = 0
+    Height = 40
+    Top = 253
+    Width = 425
+    Align = alBottom
+    ClientHeight = 40
+    ClientWidth = 425
+    TabOrder = 1
+    object btnAddRoot: TButton
+      Left = 10
+      Height = 25
+      Top = 7
+      Width = 75
+      Caption = 'Add Root'
+      OnClick = btnAddRootClick
+      TabOrder = 0
+    end
+    object btnAddChild: TButton
+      Left = 163
+      Height = 25
+      Top = 7
+      Width = 75
+      Caption = 'Add Child'
+      OnClick = btnAddChildClick
+      TabOrder = 1
+    end
+    object btnDelete: TButton
+      Left = 344
+      Height = 25
+      Top = 7
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Delete'
+      OnClick = btnDeleteClick
+      TabOrder = 2
+    end
+  end
+end
