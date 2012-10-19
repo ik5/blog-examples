@@ -1,2 +1,5 @@
 fpc/*/lib/*
-
+*bak
+*~
+*ppu
+*.o
