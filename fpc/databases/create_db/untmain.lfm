@@ -1,0 +1,96 @@
+object frmDBCreate: TfrmDBCreate
+  Left = 1071
+  Height = 179
+  Top = 561
+  Width = 361
+  BorderStyle = bsDialog
+  Caption = 'Dataset example'
+  ClientHeight = 179
+  ClientWidth = 361
+  KeyPreview = True
+  LCLVersion = '1.1'
+  object btnCreate: TButton
+    Left = 119
+    Height = 25
+    Top = 148
+    Width = 123
+    Caption = 'Create Database'
+    OnClick = btnCreateClick
+    TabOrder = 4
+  end
+  object lblDatabaseName: TLabel
+    Left = 16
+    Height = 17
+    Top = 17
+    Width = 110
+    Caption = 'Database Name:'
+    FocusControl = edtDatabaseName
+    ParentColor = False
+  end
+  object edtDatabaseName: TEdit
+    Left = 144
+    Height = 25
+    Top = 13
+    Width = 209
+    TabOrder = 0
+  end
+  object lblHost: TLabel
+    Left = 16
+    Height = 17
+    Top = 47
+    Width = 34
+    Caption = 'Host:'
+    FocusControl = edtHost
+    ParentColor = False
+  end
+  object edtHost: TEdit
+    Left = 144
+    Height = 25
+    Top = 43
+    Width = 209
+    TabOrder = 1
+  end
+  object lblUserName: TLabel
+    Left = 16
+    Height = 17
+    Top = 77
+    Width = 78
+    Caption = 'User Name:'
+    FocusControl = edtUserName
+    ParentColor = False
+  end
+  object edtUserName: TEdit
+    Left = 144
+    Height = 25
+    Top = 73
+    Width = 209
+    TabOrder = 2
+    Text = 'SYSDBA'
+  end
+  object lblPassword: TLabel
+    Left = 16
+    Height = 17
+    Top = 107
+    Width = 70
+    Caption = 'Password:'
+    FocusControl = edtPassword
+    ParentColor = False
+  end
+  object edtPassword: TEdit
+    Left = 144
+    Height = 25
+    Top = 103
+    Width = 209
+    EchoMode = emPassword
+    PasswordChar = '@'
+    TabOrder = 3
+  end
+  object FBConnection: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    LogEvents = []
+    left = 40
+    top = 128
+  end
+end
