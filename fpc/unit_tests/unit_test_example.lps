@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="5">
+      <Unit0>
+        <Filename Value="unit_test_example.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="unit_test_example"/>
+        <UsageCount Value="20"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="testcase1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestCase1"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="16"/>
+        <CursorPos X="1" Y="25"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="unitblog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="unitBlog"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="27" Y="22"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../../fpc/fpc26/packages/fcl-fpcunit/src/fpcunit.pp"/>
+        <UnitName Value="fpcunit"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="439"/>
+        <CursorPos X="30" Y="452"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../../fpc/fpc26/rtl/objpas/sysutils/sysutilh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="126"/>
+        <CursorPos X="4" Y="145"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="9" HistoryIndex="8">
+      <Position1>
+        <Filename Value="unitblog.pas"/>
+        <Caret Line="10" Column="45" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="testcase1.pas"/>
+        <Caret Line="16" Column="45" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="unitblog.pas"/>
+        <Caret Line="11" Column="27" TopLine="1"/>
+      </Position3>
+      <Position4>
+        <Filename Value="testcase1.pas"/>
+        <Caret Line="17" Column="34" TopLine="1"/>
+      </Position4>
+      <Position5>
+        <Filename Value="testcase1.pas"/>
+        <Caret Line="49" Column="12" TopLine="12"/>
+      </Position5>
+      <Position6>
+        <Filename Value="testcase1.pas"/>
+        <Caret Line="47" Column="36" TopLine="14"/>
+      </Position6>
+      <Position7>
+        <Filename Value="testcase1.pas"/>
+        <Caret Line="46" Column="17" TopLine="18"/>
+      </Position7>
+      <Position8>
+        <Filename Value="testcase1.pas"/>
+        <Caret Line="45" Column="14" TopLine="18"/>
+      </Position8>
+      <Position9>
+        <Filename Value="testcase1.pas"/>
+        <Caret Line="46" Column="46" TopLine="16"/>
+      </Position9>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>
