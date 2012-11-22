@@ -1,0 +1,77 @@
+object frmSHAExample: TfrmSHAExample
+  Left = 664
+  Height = 150
+  Top = 371
+  Width = 528
+  Caption = 'SHA Hash Example'
+  ClientHeight = 150
+  ClientWidth = 528
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.1'
+  object edtText: TEdit
+    Left = 8
+    Height = 25
+    Top = 23
+    Width = 514
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 0
+    Text = 'edtText'
+  end
+  object edtResult: TEdit
+    Left = 8
+    Height = 25
+    Top = 77
+    Width = 514
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 1
+  end
+  object btnSHA256: TButton
+    Left = 8
+    Height = 25
+    Top = 121
+    Width = 75
+    Caption = 'SHA 256'
+    OnClick = btnSHA256Click
+    TabOrder = 2
+  end
+  object btnSHA384: TButton
+    Tag = 1
+    Left = 227
+    Height = 25
+    Top = 121
+    Width = 75
+    Caption = 'SHA 384'
+    OnClick = btnSHA256Click
+    TabOrder = 3
+  end
+  object btnSHA512: TButton
+    Tag = 2
+    Left = 446
+    Height = 25
+    Top = 120
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'SHA 512'
+    OnClick = btnSHA256Click
+    TabOrder = 4
+  end
+  object lblResult: TLabel
+    Left = 8
+    Height = 17
+    Top = 56
+    Width = 46
+    Caption = 'Result:'
+    ParentColor = False
+  end
+  object lblText: TLabel
+    Left = 8
+    Height = 17
+    Top = 4
+    Width = 31
+    Caption = 'Text:'
+    FocusControl = edtText
+    ParentColor = False
+  end
+end
